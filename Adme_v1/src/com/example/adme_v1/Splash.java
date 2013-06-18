@@ -18,8 +18,8 @@ public class Splash extends Activity{
 				}catch(InterruptedException e){
 					e.printStackTrace();
 				}finally{
-					Intent openHome = new Intent("com.example.adme_v1.HOME");
-					startActivity(openHome);
+					Intent openNews = new Intent("android.intent.actioncuss.NEWS");
+					startActivity(openNews);
 					finish();
 					
 				}
