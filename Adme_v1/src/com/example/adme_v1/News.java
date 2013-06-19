@@ -2,7 +2,9 @@ package com.example.adme_v1;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Context;
 import android.view.Menu;
+import android.widget.*;
 
 public class News extends Activity {
 
@@ -10,6 +12,17 @@ public class News extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_news);
+		
+		//get the layout the view will sit in
+		LinearLayout newsLayout = (LinearLayout) findViewById(R.id.newsItemView);
+		
+		//create the view
+		RelativeLayout newsItem = new RelativeLayout(this);
+		TextView text = new TextView(this);
+		text.setText("Test text");
+		
+		newsItem.addView(text);
+		newsLayout.addView(newsItem);
 	}
 
 	@Override
