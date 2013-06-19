@@ -18,7 +18,7 @@ public class Splash extends Activity{
 				}catch(InterruptedException e){
 					e.printStackTrace();
 				}finally{
-					Intent openNews = new Intent("android.intent.actioncuss.NEWS");
+					Intent openNews = new Intent("android.intent.action.NEWS");
 					startActivity(openNews);
 					finish();
 					
