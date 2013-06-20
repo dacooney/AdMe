@@ -1,8 +1,9 @@
-package com.example.adme_v1;
+package at.adme.app;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import at.adme.app.R;
 
 public class HomeActivity extends Activity {
 

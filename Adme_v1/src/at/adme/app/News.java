@@ -1,10 +1,11 @@
-package com.example.adme_v1;
+package at.adme.app;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
 import android.view.Menu;
 import android.widget.*;
+import at.adme.app.R;
 
 public class News extends Activity {
 

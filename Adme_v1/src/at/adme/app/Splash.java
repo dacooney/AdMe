@@ -1,8 +1,9 @@
-package com.example.adme_v1;
+package at.adme.app;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import at.adme.app.R;
 
 public class Splash extends Activity{
 
