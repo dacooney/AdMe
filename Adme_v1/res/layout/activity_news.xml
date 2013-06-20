@@ -50,7 +50,8 @@
             android:layout_height="fill_parent"
             android:layout_gravity="fill_vertical"
             android:layout_weight="1"
-            android:text="Societies" />
+            android:text="Societies"
+            android:onClick="swapToSocieties" />
 
         <Button
             android:id="@+id/button3"
