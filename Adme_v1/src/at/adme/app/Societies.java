@@ -5,12 +5,12 @@ import android.app.Activity;
 import android.view.Menu;
 import at.adme.app.R;
 
-public class HomeActivity extends Activity {
+public class Societies extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_societies);
     }
 
 

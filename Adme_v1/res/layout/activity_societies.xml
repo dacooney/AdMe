@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/none"
     android:paddingRight="@dimen/none"
     android:paddingTop="@dimen/none"
-    tools:context=".HomeActivity" >
+    tools:context=".Societies" >
 
     <TextView
         android:layout_width="wrap_content"
