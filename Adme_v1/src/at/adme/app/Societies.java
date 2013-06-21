@@ -2,7 +2,9 @@ package at.adme.app;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
 import at.adme.app.R;
 
 public class Societies extends Activity {
@@ -21,4 +23,8 @@ public class Societies extends Activity {
         return true;
     }
     
+    public void swapToNews(View view){
+		Intent intent = new Intent(this, News.class);
+		startActivity(intent);
+	}
 }
