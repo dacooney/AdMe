@@ -1,8 +1,8 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/LinearLayout1"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="@dimen/none"
     android:layout_marginBottom="@dimen/none"
     android:orientation="vertical"
@@ -16,8 +16,7 @@
         android:id="@+id/scrollView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:layout_weight="0.45" >
+        android:layout_gravity="top" >
 
         <LinearLayout
             android:id="@+id/newsItemView"
@@ -68,4 +67,4 @@
             android:text="Map" />
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
