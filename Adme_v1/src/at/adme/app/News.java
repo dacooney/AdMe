@@ -75,5 +75,10 @@ public class News extends Activity {
 		}
 		return true;
 	}
+	
+	public void swapToMap(View view){
+		Intent intent = new Intent(this, Map.class);
+		startActivity(intent);
+	}
 
 }

@@ -13,6 +13,8 @@
         <item>Free tea and toast at 12.</item>
         <item>Chairperson appointed</item>
     </string-array>
+    <string name="title_activity_map">Map</string>
+    
     
 
 </resources>
