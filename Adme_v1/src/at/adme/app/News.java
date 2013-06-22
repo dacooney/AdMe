@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
 import android.widget.*;
@@ -27,6 +28,7 @@ public class News extends Activity {
 		return true;
 	}
 	
+	//Swap to the Societies Activity
 	public void swapToSocieties(View view){
 		Intent intent = new Intent(this, Societies.class);
 		startActivity(intent);
@@ -45,16 +47,30 @@ public class News extends Activity {
 		//create a view for each news item and add it to the layout
 		for(String item:news_items){
 			//create the layout
-			RelativeLayout newsItem = new RelativeLayout(this);
+			LinearLayout newsItem = new LinearLayout(this);
+			newsItem.setOrientation(1);
+			
+			//add an ImageView
+			ImageView image = new ImageView(this);
+			image.setImageResource(R.drawable.ic_launcher);
+			newsItem.addView(image);
 			
 			//create a TextView from the string
 			TextView text = new TextView(this);
 			text.setText(item);
+			newsItem.addView(text);
+			
+			//add a signature TextView
+			TextView signature = new TextView(this);
+			text.setText("signature");
+			//Typeface tf = ;
+			//text.setTypeface(tf);
+			newsItem.addView(signature);
+			
 			//TODO edit the view attributes
 			
 			//TODO add an image and signature
 			
-			newsItem.addView(text);
 			newsLayout.addView(newsItem);
 		}
 		return true;
