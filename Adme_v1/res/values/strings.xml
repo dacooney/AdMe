@@ -6,6 +6,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_news">News</string>
     <string name="dummy_content">Dummy Content</string>
+    <string name="app_id">187325848095811</string>
+
     <string-array name="news_items">
         <item>Today Something Happened.</item>
         <item>Vote for Me.</item>
@@ -13,8 +15,8 @@
         <item>Free tea and toast at 12.</item>
         <item>Chairperson appointed</item>
     </string-array>
+
     <string name="title_activity_map">Map</string>
-    
-    
+    <string name="title_activity_fblogin">FBLoginActivity</string>
 
 </resources>
