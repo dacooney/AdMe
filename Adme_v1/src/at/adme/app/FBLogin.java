@@ -8,7 +8,7 @@ import android.widget.*;
 import com.facebook.*;
 import com.facebook.model.*;
 
-public class FBLoginActivity extends Activity {
+public class FBLogin extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
