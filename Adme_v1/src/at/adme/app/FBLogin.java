@@ -15,6 +15,7 @@ public class FBLogin extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_fblogin);
 		
+		//Facebook Login stuff
 		Session.openActiveSession(this, true, new Session.StatusCallback() {
 			
 			@Override
