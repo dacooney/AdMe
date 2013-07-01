@@ -18,7 +18,8 @@ public class News extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_news);
 		
-		loadNewsItems();
+		//loadNewsItems();
+		loadHerokuNews();
 	}
 
 	@Override
@@ -76,7 +77,32 @@ public class News extends Activity {
 		return true;
 	}
 	
-	public void swapToMap(View view){
+	//TEST
+	private boolean loadHerokuNews(){
+		//get the layout to put the news items in
+		LinearLayout newsLayout = (LinearLayout) findViewById(R.id.newsItemView);
+		
+		//create a TextView from the string
+		final TextView text = new TextView(this);
+		text.setText("Start");
+		newsLayout.addView(text);
+		text.setText("Started");
+		
+		new Thread(new Runnable(){
+			public void run(){
+				//load the test posts from the heroku server
+				final String message = Web.getHerokuPosts();
+				text.post(new Runnable(){
+					public void run(){
+						text.setText(message);
+					}
+				});
+			}
+		}).start();
+		return true;
+	}
+	
+	private void swapToMap(View view){
 		Intent intent = new Intent(this, Map.class);
 		startActivity(intent);
 	}

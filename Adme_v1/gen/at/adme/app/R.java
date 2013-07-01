@@ -574,12 +574,16 @@ containing a value of this type.
         public static final int common_signin_btn_text_normal_light=0x7f020034;
         public static final int common_signin_btn_text_pressed_dark=0x7f020035;
         public static final int common_signin_btn_text_pressed_light=0x7f020036;
-        public static final int ic_launcher=0x7f020037;
-        public static final int splash_screen1=0x7f020038;
+        public static final int facebook=0x7f020037;
+        public static final int ic_launcher=0x7f020038;
+        public static final int icon=0x7f020039;
+        public static final int splash_screen1=0x7f02003a;
     }
     public static final class id {
+        public static final int FBLogin=0x7f050037;
+        public static final int FBLogout=0x7f050038;
         public static final int LinearLayout1=0x7f05001b;
-        public static final int action_settings=0x7f050037;
+        public static final int action_settings=0x7f05003c;
         public static final int alignBounds=0x7f050009;
         public static final int alignMargins=0x7f05000a;
         public static final int bottom=0x7f05000c;
@@ -619,16 +623,19 @@ containing a value of this type.
         public static final int hybrid=0x7f050004;
         public static final int large=0x7f050006;
         public static final int left=0x7f05000d;
+        public static final int login_button=0x7f05003b;
         public static final int map=0x7f05001a;
         public static final int newsItemView=0x7f05001d;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
         public static final int picker_subtitle=0x7f050033;
+        public static final int profile_name=0x7f05003a;
         public static final int right=0x7f05000e;
         public static final int satellite=0x7f050002;
         public static final int scrollView1=0x7f05001c;
         public static final int search_box=0x7f050032;
         public static final int small=0x7f050005;
+        public static final int splash_icon=0x7f050039;
         public static final int start=0x7f050017;
         public static final int terrain=0x7f050003;
         public static final int top=0x7f05000b;
@@ -653,7 +660,9 @@ containing a value of this type.
         public static final int com_facebook_placepickerfragment=0x7f03000e;
         public static final int com_facebook_placepickerfragment_list_row=0x7f03000f;
         public static final int com_facebook_usersettingsfragment=0x7f030010;
-        public static final int splash=0x7f030011;
+        public static final int fb=0x7f030011;
+        public static final int fblogin=0x7f030012;
+        public static final int splash=0x7f030013;
     }
     public static final class menu {
         public static final int fblogin=0x7f0a0000;
@@ -755,6 +764,7 @@ containing a value of this type.
          */
         public static final int common_signin_button_text_long=0x7f06000e;
         public static final int dummy_content=0x7f060032;
+        public static final int get_started=0x7f060034;
         public static final int hello_world=0x7f060030;
         /**  Location client code resources (prefix with location_client) 
 
@@ -767,8 +777,8 @@ containing a value of this type.
         public static final int location_client_ulr_inactive_age_under_13=0x7f060012;
         public static final int location_client_ulr_inactive_age_unknown=0x7f060013;
         public static final int location_client_ulr_inactive_unknown_restriction=0x7f060014;
-        public static final int title_activity_fblogin=0x7f060035;
-        public static final int title_activity_map=0x7f060034;
+        public static final int title_activity_fblogin=0x7f060036;
+        public static final int title_activity_map=0x7f060035;
         public static final int title_activity_news=0x7f060031;
     }
     public static final class style {
