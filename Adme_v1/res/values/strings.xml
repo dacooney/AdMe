@@ -8,7 +8,7 @@
     <string name="dummy_content">Dummy Content</string>
     <string name="app_id">187325848095811</string>
     <string name="get_started">To get started, log in using Facebook</string>
-    <string name="app_name">Scrumptious</string>
+    <string name="app_name">AdMe_v1</string>
 
     <string-array name="news_items">
         <item>Today Something Happened.</item>
