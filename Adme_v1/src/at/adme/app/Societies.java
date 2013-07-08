@@ -23,8 +23,21 @@ public class Societies extends Activity {
         return true;
     }
     
+    //Move to the News view
     public void swapToNews(View view){
 		Intent intent = new Intent(this, News.class);
+		startActivity(intent);
+	}
+    
+	//Move to the Events view
+	public void swapToEvents(View view){
+		Intent intent = new Intent(this, Events.class);
+		startActivity(intent);
+	}
+	
+	//Move to the Map view
+	public void swapToMap(View view){
+		Intent intent = new Intent(this, Map.class);
 		startActivity(intent);
 	}
 }

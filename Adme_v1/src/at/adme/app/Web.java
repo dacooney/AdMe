@@ -2,7 +2,6 @@ package at.adme.app;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-
 import org.apache.http.*;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.ResponseHandler;
@@ -13,12 +12,12 @@ import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpParams;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.json.JSONArray;
 import org.json.JSONTokener;
-
 import android.net.http.*;
 
 public class Web {
-	public static String getHerokuPosts(){
+	public static String[] getHerokuPosts(){
 		//get the authentication token
 		String token = getAuthToken();
 		
@@ -47,18 +46,25 @@ public class Web {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		String result = response.toString();
+		String value = response.toString();
 		
 		//parse the result
-		//JSONObject obj = null;
-		//String token = null; 
-		//try {
-		//	obj = (JSONObject) new JSONTokener(result).nextValue();
-		//	token = obj.getString("token");
-		//} catch (JSONException e) {
-		//	// TODO Auto-generated catch block
-		//	e.printStackTrace();
-		//}
+		JSONArray arr = null;
+		String text = null;
+		JSONObject obj = null;
+		String[] result = null;
+		try {
+			arr = (JSONArray) new JSONTokener(value).nextValue();
+			result = new String[arr.length()];
+			for(int i = 0; i < arr.length(); i++){
+				obj = arr.getJSONObject(i);
+				result[i] = obj.getString("content");
+				System.out.println(result[i]);
+			}
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		//String posts = token;
 		return result;

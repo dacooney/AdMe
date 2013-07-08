@@ -29,12 +29,6 @@ public class News extends Activity {
 		return true;
 	}
 	
-	//Swap to the Societies Activity
-	public void swapToSocieties(View view){
-		Intent intent = new Intent(this, Societies.class);
-		startActivity(intent);
-	}
-	
 	private boolean loadNewsItems(){
 		//get the layout to put the news items in
 		LinearLayout newsLayout = (LinearLayout) findViewById(R.id.newsItemView);
@@ -78,6 +72,7 @@ public class News extends Activity {
 	}
 	
 	//TEST
+	//loads all posts from the remote heroku server tom set up.
 	private boolean loadHerokuNews(){
 		//get the layout to put the news items in
 		LinearLayout newsLayout = (LinearLayout) findViewById(R.id.newsItemView);
@@ -91,10 +86,12 @@ public class News extends Activity {
 		new Thread(new Runnable(){
 			public void run(){
 				//load the test posts from the heroku server
-				final String message = Web.getHerokuPosts();
+				final String[] messages = Web.getHerokuPosts();
 				text.post(new Runnable(){
 					public void run(){
-						text.setText(message);
+						for(int i = 0; i < messages.length; i++){
+							addNewPost(messages[i]);
+						}
 					}
 				});
 			}
@@ -102,9 +99,38 @@ public class News extends Activity {
 		return true;
 	}
 	
-	private void swapToMap(View view){
+	private void addNewPost(String postText){
+		//get the layout to put the news items in
+		LinearLayout newsLayout = (LinearLayout) findViewById(R.id.newsItemView);
+		
+		LinearLayout post = new LinearLayout(this);
+		post.setOrientation(1);
+		TextView title = new TextView(this);
+		title.setText("Heroku Test App");
+		title.setTextSize(14);
+		post.addView(title);
+		TextView text = new TextView(this);
+		text.setText(postText);
+		post.addView(text);
+		
+		newsLayout.addView(post);
+	}
+	
+	//Move to the Map view
+	public void swapToMap(View view){
 		Intent intent = new Intent(this, Map.class);
 		startActivity(intent);
 	}
-
+	
+	//Move to the Societies view
+	public void swapToSocieties(View view){
+		Intent intent = new Intent(this, Societies.class);
+		startActivity(intent);
+	}
+	
+	//Move to the Events view
+	public void swapToEvents(View view){
+		Intent intent = new Intent(this, Events.class);
+		startActivity(intent);
+	}
 }

@@ -20,5 +20,6 @@
 
     <string name="title_activity_map">Map</string>
     <string name="title_activity_fblogin">FBLoginActivity</string>
+    <string name="title_activity_events">Events</string>
 
 </resources>

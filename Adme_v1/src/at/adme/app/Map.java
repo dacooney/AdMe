@@ -2,20 +2,19 @@ package at.adme.app;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
-
 import android.os.Bundle;
 import android.app.Activity;
+import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
-
 import android.app.Activity;
 import android.os.Bundle;
 
 
 
-public class Map extends Activity {
+public class Map extends FragmentActivity {
 	private static final LatLng TRINITY = new LatLng(53.343,-6.254);
 	
 	
