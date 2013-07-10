@@ -14,18 +14,22 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONArray;
 import org.json.JSONTokener;
+
+import com.facebook.Request;
+import com.facebook.Response;
+import com.facebook.Session;
+
+import android.content.Context;
 import android.net.http.*;
 
 public class Web {
+	//gets the list of posts from the heroku test server
 	public static String[] getHerokuPosts(){
 		//get the authentication token
 		String token = getAuthToken();
 		
 		//Instantiate client
 		AndroidHttpClient client = AndroidHttpClient.newInstance("AdMe");
-		
-		//TEST
-		//HttpGet postRequest = new HttpGet("http://httpbin.org/get");
 		
 		//create the uri for the posts
 		String url = "http://tomtesting.herokuapp.com/posts.json?auth_token="+token;
@@ -65,6 +69,9 @@ public class Web {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		//close http connection
+		client.close();
 		
 		//String posts = token;
 		return result;
@@ -128,5 +135,24 @@ public class Web {
 		}
 		
 		return token;
+	}
+	
+	//gets posts from facebook
+	public static String[] getFBPosts(Context context){
+		String[] result = null;
+		
+		String testPath = "";
+		
+		Session fbSession = Session.openActiveSessionFromCache(context);
+		Request.executeGraphPathRequestAsync(fbSession, testPath, new Request.Callback() {
+			
+			@Override
+			public void onCompleted(Response response) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+		return result;
 	}
 }

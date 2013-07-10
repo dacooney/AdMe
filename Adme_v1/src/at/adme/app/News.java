@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
 import at.adme.app.R;
@@ -29,6 +30,17 @@ public class News extends Activity {
 		return true;
 	}
 	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()){
+			case (R.id.fblogin):
+				swapToFB();
+				return true;
+			default:
+				return super.onOptionsItemSelected(item);
+		}
+	}
+
 	private boolean loadNewsItems(){
 		//get the layout to put the news items in
 		LinearLayout newsLayout = (LinearLayout) findViewById(R.id.newsItemView);
@@ -131,6 +143,12 @@ public class News extends Activity {
 	//Move to the Events view
 	public void swapToEvents(View view){
 		Intent intent = new Intent(this, Events.class);
+		startActivity(intent);
+	}
+	
+	//Move to the Facebook login view
+	public void swapToFB(){
+		Intent intent = new Intent(this, FBLogin.class);
 		startActivity(intent);
 	}
 }
